@@ -1,0 +1,304 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Circular Std', sans-serif;
+    
+}
+
+html, body{height: 100%;}
+
+.sidebar{
+    background-color: black;
+    float: left;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 250px;
+    padding: 30px 30px;
+    height: 100%
+    
+}
+
+.sidebar-wraper{
+    padding-bottom: 200px;
+}
+
+.sidebar_menu{
+    margin: 20px 0;
+    color: rgb(190, 190, 190);    
+}
+
+.sidebar_logo img{
+    width: 150px;
+    padding-left: 5px;
+    
+}
+
+.sidebar_menu a{
+    color:rgb(190, 190, 190);
+    text-decoration: none;
+    padding: 10px ;
+    display: block;
+    font-size: 15px;
+}
+
+.sidebar_menu a:hover{
+    color:white;
+    background-color: rgb(30, 30, 30);
+    border-radius: 7px;
+}
+
+
+
+.sidebar_menu_item{
+    margin-top: 12px;
+    cursor: pointer;
+    vertical-align: middle;
+    padding: 0 10px;
+
+}
+
+.sidebar_menu_item img{
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.sidebar_menu p.sidebar_menu_title{
+    color: white;
+
+}
+
+.sidebar_component{
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    display: inline-block;
+    color: black;
+    background-color: rgb(190, 190, 190);
+    font-weight: bold;
+}
+
+.sidebar_menu_item span:hover{
+    color: white
+}
+
+.sidebar_playlists{
+    padding: 10px 0;
+    border-top: 1px solid rgb(40, 40, 40);
+}
+
+.sidebar_playlists a{
+    margin: 1px 0;
+    display: block;
+}
+
+.sidebar_playlists a:hover{
+    color: white;
+    background-color: black;
+    display: block;
+}
+
+/*Parte principal do site*/
+
+.main{
+
+    width: calc(100% - 250px);
+    background-image: linear-gradient(to bottom, #2b145f 0%, #161616 35%);
+    height: 100%;
+    float : left;
+    
+    padding: 15px 50px;
+    overflow-y: auto;
+    
+}
+
+.main_row{
+    
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    margin-left: 5px;
+
+}
+
+.main-wraper{
+    padding-bottom: 200px;
+}
+
+.main_row_title{
+
+    width: 100%;
+    
+}
+
+.main_row_title h2{
+
+    color: white;
+    font-size: 30px;
+    
+}
+
+.main_col{
+    cursor: pointer;
+    width: 12%;
+    margin-right: 2%;
+    margin-top: 20px;
+    background-color: #1b1b1b;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: left;
+    color: rgb(150, 150, 150);
+    
+}
+
+.main_col h3{
+    color: white;
+}
+
+.main_col img{
+
+    width: 150px;
+    border-radius: 5px;
+}
+
+.main_col_recent img{
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 5px;
+    
+}
+
+.main_col_recent{
+
+    cursor: pointer;
+    width: 48%;
+    margin-top: 20px;
+    margin-right: 2%;
+    background-color: #27253b;
+    border-radius: 8px;
+    padding: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    transition: background-color 0.5s ease-in-out;
+    position: relative;
+    
+    
+}
+
+.main_col_recent span{
+
+    font-size: 15px;
+    padding: 0 10px;
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: middle;
+    color: white
+
+
+}
+
+.main_col_recent:hover{
+    
+    background-color: #4c4974; 
+}
+
+.player{
+
+    width: 100%;
+    padding: 20px;
+    height: 130px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    background-color: rgb(25, 25, 25);
+    border-top-width: 0.5px;
+    border-top: solid rgb(60, 60, 60);
+
+}
+
+.player_artist{
+
+    width: 20%;
+}
+
+.player_artist img{
+
+    max-width: 70px;
+    display:inline-block;
+    vertical-align: middle;
+}
+
+.player_artist h3{
+
+    font-weight: normal;
+    color: white;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.player_artist h3 > span{
+
+    color: rgb(200, 200, 200);
+    font-size: 13px;
+}
+
+.player_control{
+
+    width: 60%;
+    text-align: center;
+}
+
+.player_control_btns a{
+
+    color: white;
+    margin: 8px 15px;
+    font-size: 33px;
+}
+
+.player_control_progress{
+    width: 100%;
+    max-width: 600px;
+    height: 6px;
+    margin-top: 20px;
+    position: relative;
+    border-radius: 8px;
+    display: inline-block;
+    background: rgb(130, 130, 130);
+    
+}
+
+.player_control_progress_2{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: 7px;
+    border-radius: 8px;
+    background-color: white;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

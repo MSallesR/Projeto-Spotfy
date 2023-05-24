@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+   
+    <title>Spotify</title>
+
+    <link rel = "stylesheet" href="main.css">
+    <link href="https://fonts.cdnfonts.com/css/circular-std" rel="stylesheet">
+                
+</head>
+
+<body>
+    <div class = "sidebar">
+        <div class = "sidebar-wraper">
+            <div class = "sidebar_logo">
+                <img src="img/Spotify_Logo_RGB_White.png">
+            </div>
+            <div class = "sidebar_menu">
+                <a class = "sidebar_select" href = "#"><i class = "fas fa-home"></i> Inicio</a>
+                <a href = "#"><i class = "fas fa-search"></i> Buscar</a>
+                <a href = "#"><i class = "fas fa-database" ></i> Sua Biblioteca</a>
+            
+            <div class = "sidebar_menu">
+                <p class = "sidebar_menu_title"> PLAYLISTS</p>
+                <div class = "sidebar_menu_item">
+                    <div class = "sidebar_component">
+                        <span style = "font-size: 25px;"> + </span>
+                    </div><!--sidebar_component-->
+                    <span> Criar playlist </span>
+                </div><!--sidebar_menu_item-->
+
+                <div class = "sidebar_menu_item">
+                    <img src = "img/liked-songs-300.png">
+                <span> Músicas Curtidas</span>
+                </div><!--sidebar_menu_item-->
+
+            </div><!--sidebar_menu-->
+            
+            <div class = "sidebar_playlists">
+                <a href = "">Rock</a>
+                <a href = "">Trap</a>
+                <a href = "">Funk</a>
+                <a href = "">Samba</a>
+            </div><!--sidebar_playlists-->
+            
+
+            </div><!--sidebar_menu-->
+
+        </div><!--sidebar-wraper-->
+
+    </div><!--sidebar-->
+
+
+    <div class = "main">
+        <div class = "main-wraper">
+
+            <div class = "main_row">
+                <div class = "main_row_title"><h2> Mais recentes </h2></div>
+
+                <div class = "main_col_recent"  data-image = "img/350x350.png" data-artist = "Red Hot Chilli Peppers" data-song = "Can't stop" data-file="assets/Red_Hot_Chili_Peppers_-_Can_t_Stop_(ColdMP3.com).mp3">
+                    <img src = "img/350x350.png"/>                    
+                    <span> <h3> Can't stop </h3> </span>
+                    
+
+                </div><!--main_col_recent-->
+
+                <div class = "main_col_recent" data-image = "img/images-_2_.png" data-artist="Red Hot Chilli Peppers" data-song="Dani California" data-file="assets/Red_Hot_Chili_Peppers_-_Dani_California_(ColdMP3.com).mp3">
+                    <div>
+                        <img src = "img/images (2).jpg"/>
+                        <span> <h3> Dani California </h3> </span>
+                    </div>
+                    
+
+                </div><!--main_col_recent-->
+
+            </div><!--main_row-->
+
+
+            <div class = "main_row">
+                <div class = "main_row_title"><h2> Paradas </h2></div>
+
+                <div class = "main_col">
+                    <img src = "img/region_br_default.png"/>
+                    <h3> O que está bombando na sua região </h3>
+                    <p> Aqui vai a descrição da minha música </p>
+
+                </div><!--main_col-->
+
+                <div class = "main_col">
+                    <img src = "img/region_br_default.png"/>
+                    <h3> O que está bombando na sua região </h3>
+                    <p> Aqui vai a descrição da minha música </p>
+
+                </div><!--main_col-->
+
+                <div class = "main_col">
+                    <img src = "img/region_br_default.png"/>
+                    <h3> O que está bombando na sua região </h3>
+                    <p> Aqui vai a descrição da minha música </p>
+
+                </div><!--main_col-->
+
+                <div class = "main_col">
+                    <img src = "img/region_br_default.png"/>
+                    <h3> O que está bombando na sua região </h3>
+                    <p> Aqui vai a descrição da minha música </p>
+
+                </div><!--main_col-->
+
+                <div class = "main_col">
+                    <img src = "img/region_br_default.png"/>
+                    <h3> O que está bombando na sua região </h3>
+                    <p> Aqui vai a descrição da minha música </p>
+
+                </div><!--main_col-->
+
+                <div class = "main_col">
+                    <img src = "img/region_br_default.png"/>
+                    <h3> O que está bombando na sua região </h3>
+                    <p> Aqui vai a descrição da minha música </p>
+
+                </div><!--main_col-->
+
+                <div class = "main_col">
+                    <img src = "img/region_br_default.png"/>
+                    <h3> O que está bombando na sua região </h3>
+                    <p> Aqui vai a descrição da minha música </p>
+
+                </div><!--main_col-->
+
+                
+                    
+            
+            </div><!--main_row-->
+
+        </div><!--main-wraper-->
+
+
+    </div><!--main-->
+
+    <div class = "player">
+        <div class = "player_artist">
+
+        </div><!--artist-->
+        <div class = "player_control">
+            <div class = "player_control_btns">
+                <a href=""> <i class="fas fa-backward"></i></a>
+                <a style = "display: none;" id = "pauseBtn" href="#"><i class="far fa-pause-circle"></i> </a>
+                <a id = "playBtn" href="#"><i class="far fa-play-circle"></i> </a>
+                <a href=""><i class="fas fa-forward"></i></a>
+            </div>
+
+            <div class = "player_control_progress">
+
+                <div style = "width: 0%;" class = "player_control_progress_2"></div>
+
+            </div>
+
+        </div><!--control-->
+        
+    </div><!--player-->
+
+    <audio id = "audioplayer" style = "position: absolute; left: 0; top: 0; display: none;" controls = ""> 
+        
+    </audio>
+
+    <script src = "js/all.min.js"></script>
+
+    <script>
+        
+        var audioPlayer = document.getElementById('audioplayer');
+        var loaded = false;
+
+        var playBtn = document.getElementById('playBtn');
+        var pauseBtn = document.getElementById('pauseBtn');
+
+
+
+        pauseBtn.addEventListener('click', (e)=>{
+            e.preventDefault();
+
+            playBtn.style.display = "inline";
+            pauseBtn.style.display = "none";
+            audioPlayer.pause();
+
+
+
+            return false;
+        });
+
+        playBtn.addEventListener('click', (e)=>{
+            e.preventDefault();
+
+            playBtn.style.display = "none";
+            pauseBtn.style.display = "inline";
+            audioPlayer.play();
+
+
+
+            return false;
+        });
+
+        const playSong = (file) => {
+
+            if(loaded == false){
+                audioPlayer.innerHTML = `<source src = "`+file+`" type = "audio/mp3" />`;
+                loaded = true;
+            }
+
+            audioPlayer.play();
+
+            playBtn.style.display = "none";
+            pauseBtn.style.display = "inline";
+        }
+
+        document.querySelectorAll('.main_col_recent').forEach(item =>{
+
+            item.addEventListener('click', event =>{
+                let image = item.getAttribute('data-image');
+                let artist = item.getAttribute('data-artist');
+                let song = item.getAttribute('data-song');
+                let file = item.getAttribute('data-file');
+
+                playerArtistComponent = document.getElementsByClassName('player_artist');
+
+                playerArtistComponent[0].innerHTML = `
+                
+                <img src = "`+image+`" />
+                <h3>`+song+`<br/><span>`+artist+`</span></h3>
+                
+                
+                `;
+
+                playSong(file);
+
+            })
+        })
+
+    </script>
+    
+    
+</body>
+</html>
